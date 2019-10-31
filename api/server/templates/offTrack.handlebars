@@ -7,10 +7,40 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Simple Transactional Email</title>
     <style>
-        .tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
-        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-        .tg .tg-0lax{text-align:left;vertical-align:top}
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin: 0px auto;
+        }
+
+        .tg td {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+            border-color: black;
+        }
+
+        .tg th {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+            border-color: black;
+        }
+
+        .tg .tg-0lax {
+            text-align: left;
+            vertical-align: top
+        }
+
         /* -------------------------------------
         INLINED WITH htmlemail.io/inline
     ------------------------------------- */
@@ -144,7 +174,11 @@
                                                 Hi {{firstName}},</p>
                                             <p
                                                 style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
-                                                We are pleased to inform you that you have successfully passed this level of your training. See your scores below</p>
+                                                Unfortunately, you have not passed this level of training. However, you can always
+                                                level up and do the assessments again.</p>
+                                            <p
+                                                style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
+                                                Kindly scrutinise the scores below to see areas for improvement.</p>
                                             <table class="tg">
                                                 <tr>
                                                     <td class="tg-0lax">Attendance</td>
@@ -166,13 +200,22 @@
                                                     <td class="tg-0lax">IP4</td>
                                                     <td class="tg-0lax">{{ip4}}</td>
                                                 </tr>
+                                                <tr>
+                                                    <td class="tg-0lax">reason for initial recommendation</td>
+                                                    <td class="tg-0lax">{{recom1}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tg-0lax">Reason for final recommendation</td>
+                                                    <td class="tg-0lax">{{recom2}}</td>
+                                                </tr>
                                             </table>
                                             <p
                                                 style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px; Margin-top:15px">
-                                                Congratulations on achieving this milestone!!!</p>
+                                                we believe in your abilities and encourage you to give it another shot!!!</p>
                                             <p
                                                 style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
-                                                For any questions or clarification, kindly reach out to your technical mentor.</p>
+                                                For any questions or clarification, kindly reach out to your technical
+                                                mentor.</p>
                                         </td>
                                     </tr>
                                 </table>
@@ -190,7 +233,8 @@
                                 <td class="content-block"
                                     style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
                                     <span class="apple-link"
-                                        style="color: #999999; font-size: 12px; text-align: center;">Moringa school, Ngong Lane Plaza, Ngong Road</span>
+                                        style="color: #999999; font-size: 12px; text-align: center;">Moringa school,
+                                        Ngong Lane Plaza, Ngong Road</span>
                                     <br> Don't like these emails? <a href="http://i.imgur.com/CScmqnj.gif"
                                         style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Unsubscribe</a>.
                                 </td>
@@ -199,7 +243,8 @@
                                 <td class="content-block powered-by"
                                     style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
                                     <a href="http://moringaschool.com"
-                                        style="color: #999999; font-size: 12px; text-align: center; text-decoration: none;">Moringa School</a>.
+                                        style="color: #999999; font-size: 12px; text-align: center; text-decoration: none;">Moringa
+                                        School</a>.
                                 </td>
                             </tr>
                         </table>
@@ -214,4 +259,4 @@
     </table>
 </body>
 
-</html> 
+</html>
