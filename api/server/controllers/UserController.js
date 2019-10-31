@@ -36,7 +36,6 @@ class Usercontroller {
             return false;
           }
         };
-        console.log(data[key].Email);
         const firstName = data[key].Student.split(',')[0];
         const lastName = data[key].Student.split(',')[1];
         const email = data[key].Email;
@@ -63,7 +62,6 @@ class Usercontroller {
           reason1,
           reason2
         };
-        // console.log(newUSer);
         async function addUser() {
           const createdUser = await UserService.addUser(newUSer);
           util.setSuccess(201, 'User Added!', createdUser);
@@ -98,7 +96,6 @@ class Usercontroller {
             }
           };
           transporter.sendMail(mailOptions, (error, response) => {
-            // eslint-disable-next-line no-unused-expressions
             error ? console.log(error) : console.log('accepted-ontrack', response.accepted);
             transporter.close();
           });
@@ -120,13 +117,12 @@ class Usercontroller {
             }
           };
           transporter.sendMail(mailOptions, (error, response) => {
-            // eslint-disable-next-line no-unused-expressions
             error ? console.log(error) : console.log('accepted-offtrack:', response.accepted);
             transporter.close();
           });
         }
       });
-      util.setSuccess(200, 'yaay');
+      util.setSuccess(200, 'Emails successfully sent');
       return util.send(res);
     } catch (error) {
       console.log(error);
@@ -142,9 +138,6 @@ class Usercontroller {
         Object.keys(allUsers).forEach((key) => {
           emailList.push(allUsers[key].email);
         });
-        // Object.keys(data).forEach((key) => {
-        //   console.log(data[key].Student.split(',')[0]);
-        // });
         util.setSuccess(200, 'Users retrieved', allUsers);
       } else {
         util.setSuccess(200, 'No users found');
