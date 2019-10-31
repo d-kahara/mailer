@@ -6,7 +6,7 @@ const workAssessment = xlsx.readFile(path.resolve('sheet.xlsx'));
 /*
 * Parse a specific sheet in the workbook
 */
-const currentWorksheet = workAssessment.Sheets['Sheet1'];
+const currentWorksheet = workAssessment.Sheets.Sheet1;
 /*
 * Parse xlsx record as Json data
 */
