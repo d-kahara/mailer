@@ -41,3 +41,4 @@ typings/
 # react / gatsby 
 public/
 
+*.xlsx

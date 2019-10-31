@@ -9,6 +9,14 @@ class UserService {
       throw error;
     }
   }
+
+  static async getAllUsers() {
+    try {
+      return await database.User.findAll({ raw: true });
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 export default UserService;
