@@ -32,6 +32,7 @@
     sudo su - postgres
     psql
     CREATE DATABASE db_name encoding 'utf-8';
+    CREATE DATABASE db_name_test encoding 'utf-8';
     ```
 9. Run database migrations to create the tables using `sequelize db:migrate`
 10. To start the application run `npm run dev`
@@ -47,3 +48,7 @@ GET | /users | Get a List of all users
 GET | /users/sendEmail | Send bulk emails to users in the database
 GET | /users/upload | Upload google sheet data to database
 
+## Testing
+
+
+**Unit tests** - Run `npm run test` on the terminal while within the **project root directory**. Unit testing is achieved through the use of `mocha` package. 
