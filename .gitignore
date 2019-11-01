@@ -41,6 +41,5 @@ typings/
 # react / gatsby 
 public/
 
-*.xlsx
 .nyc_output/
 build/
