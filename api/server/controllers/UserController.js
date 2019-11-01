@@ -97,6 +97,7 @@ class Usercontroller {
           };
           transporter.sendMail(mailOptions, (error, response) => {
             error ? console.log(error) : console.log('accepted-ontrack', response.accepted);
+            console.log('rejected: ', response.rejected);
             transporter.close();
           });
         } else {
@@ -118,14 +119,14 @@ class Usercontroller {
           };
           transporter.sendMail(mailOptions, (error, response) => {
             error ? console.log(error) : console.log('accepted-offtrack:', response.accepted);
+            console.log('rejected: ', response.rejected);
             transporter.close();
           });
         }
       });
-      util.setSuccess(200, 'Emails successfully sent');
+      util.setSuccess(200, 'Emails sent successfully');
       return util.send(res);
     } catch (error) {
-      console.log(error);
       return util.send(res);
     }
   }
